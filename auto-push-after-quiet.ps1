@@ -1,6 +1,5 @@
 param(
-    [int]$QuietMinutes = 15,
-    [int]$PollSeconds = 60,
+    [int]$IntervalMinutes = 15,
     [string]$Remote = "origin",
     [string]$Branch = "main"
 )
@@ -28,31 +27,13 @@ function Ensure-Branch {
 }
 
 Write-Host "Watching $repoRoot for Git changes."
-Write-Host "Changes will be committed and pushed after $QuietMinutes quiet minutes."
+Write-Host "Every $IntervalMinutes minutes, changes will be committed and pushed if present."
 Write-Host "Press Ctrl+C to stop."
 
-$lastChangeAt = $null
-$lastSignature = $null
-
 while ($true) {
-    $status = git status --porcelain
+    Start-Sleep -Seconds ($IntervalMinutes * 60)
 
-    if ([string]::IsNullOrWhiteSpace($status)) {
-        $lastChangeAt = $null
-        $lastSignature = $null
-        Start-Sleep -Seconds $PollSeconds
-        continue
-    }
-
-    $signature = ($status | Out-String)
-    if ($signature -ne $lastSignature) {
-        $lastSignature = $signature
-        $lastChangeAt = Get-Date
-        Write-Host "Detected changes at $lastChangeAt. Waiting for quiet period..."
-    }
-
-    $quietFor = (Get-Date) - $lastChangeAt
-    if ($quietFor.TotalMinutes -ge $QuietMinutes) {
+    if (Has-GitChanges) {
         Ensure-Branch
         git add -A
 
@@ -62,10 +43,7 @@ while ($true) {
             git push -u $Remote $Branch
             Write-Host "Pushed changes at $(Get-Date)."
         }
-
-        $lastChangeAt = $null
-        $lastSignature = $null
+    } else {
+        Write-Host "No changes at $(Get-Date)."
     }
-
-    Start-Sleep -Seconds $PollSeconds
 }
