@@ -9,8 +9,7 @@ const Rating = ({ heading }) => {
 
   return (
     <div className="rating-container">
-      <h2>Rate Your Experience</h2>
-      <p>{heading}</p>
+      <h2>{heading}</h2>
       <div className="stars">
         {stars.map((star) => (
           <span
