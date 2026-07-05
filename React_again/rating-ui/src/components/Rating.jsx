@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Rating = ({ heading }) => {
+const Rating = ({ heading = "Rate Your Experience?", color = "gold" }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
