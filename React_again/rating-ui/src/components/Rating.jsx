@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Star from "./Star";
+import Modal from "./Modal";
 
 const Rating = ({
   heading = "Rate Your Experience?",
@@ -50,9 +51,7 @@ const Rating = ({
         Submit
       </button>
       {/* Modal */}
-      {submitted && (
-        
-      )}
+      <Modal isOpen={submitted} onClose={closeModal} rating={rating} />
     </div>
   );
 };
