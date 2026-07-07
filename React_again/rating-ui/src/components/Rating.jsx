@@ -16,7 +16,14 @@ const Rating = ({
       <h2>{heading}</h2>
       <div className="stars">
         {stars.map((star) => (
-          <Star key={star} />
+          <Star
+            key={star}
+            star={star}
+            rating={rating}
+            hover={hover}
+            color={color}
+            ratingClick={() => console.log("tested")}
+          />
           // <span
           //   onClick={() => setRating(star)}
           //   onMouseEnter={() => setHover(star)}
