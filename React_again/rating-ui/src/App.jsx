@@ -6,7 +6,7 @@ const App = () => {
     <div>
       <Rating
         heading="How do u feel about React?"
-        color="red"
+        // color="red"
         feedbackMessages={[
           "Hate it",
           "Dislike it",

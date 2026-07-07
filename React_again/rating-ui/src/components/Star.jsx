@@ -1,9 +1,19 @@
 import React from "react";
 
-const Star = ({ star, ratingClick, rating, hover, color }) => {
+const Star = ({
+  star,
+  ratingClick,
+  rating,
+  hover,
+  color,
+  hoverEnter,
+  hoverLeave,
+}) => {
   return (
     <span
       onClick={() => ratingClick(star)}
+      onMouseEnter={() => hoverEnter(star)}
+      onMouseLeave={hoverLeave}
       className="star"
       style={{ color: star <= (hover || rating) ? color : "#ccc" }}
     >

@@ -8,6 +8,7 @@ const Rating = ({
 }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
 
   const stars = Array.from({ length: 5 }, (_, i) => i + 1);
 
@@ -22,20 +23,15 @@ const Rating = ({
             rating={rating}
             hover={hover}
             color={color}
-            ratingClick={() => console.log("tested")}
+            ratingClick={setRating}
+            hoverEnter={setHover}
+            hoverLeave={() => setHover(null)}
           />
-          // <span
-          //   onClick={() => setRating(star)}
-          //   onMouseEnter={() => setHover(star)}
-          //   onMouseLeave={() => setHover(0)}
-          //   key={star}
-          //   className={`star ${star <= (hover || rating) ? "active" : ""}`}
-          // >
-          //   {"\u2605"}
-          // </span>
         ))}
       </div>
       {rating > 0 && <p className="feedback">{feedbackMessages[rating - 1]}</p>}
+
+      <button className="submit">Submit</button>
     </div>
   );
 };
