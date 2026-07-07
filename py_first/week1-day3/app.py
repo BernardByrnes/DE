@@ -23,6 +23,8 @@ def main():
         hint = get_hint(guess, secret_number)
         print(hint)
 
+    print(f"You guessed the number in {attempts} attempts.")
+
 
 if __name__ == "__main__":
     main()
