@@ -7,6 +7,20 @@ def get_hint(guess, secret_number):
         return "Correct"
 
 
+def print_guess_history(guesses):
+    print("")
+    print("Guess History")
+    print("-------------")
+
+    for previous_guess in guesses:
+        print(f"-{previous_guess}")
+
+
+def print_summary(summary):
+    print("")
+    print("Game Summary")
+
+
 def main():
     secret_number = 7
     guess = 0
@@ -31,6 +45,7 @@ def main():
         "attempts": attempts,
         "result": "won",
     }
+
     print(f"You guessed the number in {attempts} attempts.")
     print("Guess History")
 
