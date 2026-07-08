@@ -5,3 +5,4 @@ for guess in guesses:
 
 
 summary = {"player_name": "Ben", "attempts": 3, "result": "won"}
+print(summary["player_name"])
