@@ -23,6 +23,9 @@ def print_summary(summary):
     print(f"Player: {summary['player_name']}")
     print(f"Secret number: {summary['secret_number']}")
     print(f"Attempts: {summary['attempts']}")
+    print(
+        f"Range: {summary['minimum_guess']} to {summary['maximum_guess']}"
+    )
     print(f"Result: {summary['result']}")
 
 
@@ -30,6 +33,8 @@ def main():
     secret_number = 7
     guess = 0
     attempts = 0
+    minimum_guess = 1
+    maximum_guess = 10
     guesses = []
     player_name = input("What is your name? ")
 
@@ -44,11 +49,22 @@ def main():
         attempts = attempts + 1
         hint = get_hint(guess, secret_number)
         print(hint)
+
+    if attempts <= 2:
+    performance = "fast"
+elif attempts <= 4:
+    performance = "steady"
+else:
+    performance = "persistent"
+
+
     summary = {
         "player_name": player_name,
         "secret_number": secret_number,
         "attempts": attempts,
         "result": "won",
+        "minimum_guess": minimum_guess,
+        "maximum_guess": maximum_guess,
     }
     print_guess_history(guesses)
     print_summary(summary)
