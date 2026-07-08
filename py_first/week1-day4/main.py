@@ -26,6 +26,7 @@ def print_summary(summary):
     print(
         f"Range: {summary['minimum_guess']} to {summary['maximum_guess']}"
     )
+    print(f"Performance: {summary['performance']}")
     print(f"Result: {summary['result']}")
 
 
@@ -36,6 +37,7 @@ def main():
     minimum_guess = 1
     maximum_guess = 10
     guesses = []
+    performance = ""
     player_name = input("What is your name? ")
 
     print("Number Guessing Game")
@@ -51,12 +53,11 @@ def main():
         print(hint)
 
     if attempts <= 2:
-    performance = "fast"
-elif attempts <= 4:
-    performance = "steady"
-else:
-    performance = "persistent"
-
+        performance = "fast"
+    elif attempts <= 4:
+        performance = "steady"
+    else:
+        performance = "persistent"
 
     summary = {
         "player_name": player_name,
@@ -65,6 +66,7 @@ else:
         "result": "won",
         "minimum_guess": minimum_guess,
         "maximum_guess": maximum_guess,
+        "performance": performance,
     }
     print_guess_history(guesses)
     print_summary(summary)
