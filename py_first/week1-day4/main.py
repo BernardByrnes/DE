@@ -19,6 +19,11 @@ def print_guess_history(guesses):
 def print_summary(summary):
     print("")
     print("Game Summary")
+    print("------------")
+    print(f"Player: {summary['player_name']}")
+    print(f"Secret number: {summary['secret_number']}")
+    print(f"Attempts: {summary['attempts']}")
+    print(f"Result: {summary['result']}")
 
 
 def main():
@@ -45,9 +50,8 @@ def main():
         "attempts": attempts,
         "result": "won",
     }
-
-    print(f"You guessed the number in {attempts} attempts.")
-    print("Guess History")
+    print_guess_history(guesses)
+    print_summary(summary)
 
     for previous_guess in guesses:
         print(f"- {previous_guess}")
