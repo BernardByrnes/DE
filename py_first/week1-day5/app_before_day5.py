@@ -88,13 +88,13 @@ def main():
         performance = "persistent"
 
     summary = build_summary(
-        player_name,
-        secret_number,
-        attempts,
-        "won",
-        minimum_guess,
-        maximum_guess,
-        performance,
+        player_name=player_name,
+        secret_number=secret_number,
+        attempts=attempts,
+        minimum_guess=minimum_guess,
+        maximum_guess=maximum_guess,
+        performance=performance,
+        result="won",
     )
     print_guess_history(guesses)
     print_summary(summary)
