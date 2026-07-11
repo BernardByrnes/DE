@@ -25,6 +25,26 @@ def print_guess_history(guesses):
         print(f"-{previous_guess}")
 
 
+def build_summary(
+    player_name,
+    secret_number,
+    attempts,
+    minimum_guess,
+    maximum_guess,
+    performance,
+    result="won",
+):
+    return {
+        "player_name": player_name,
+        "secret_number": secret_number,
+        "attempts": attempts,
+        "result": result,
+        "minimum_guess": minimum_guess,
+        "maximum_guess": maximum_guess,
+        "performance": performance,
+    }
+
+
 def print_summary(summary):
     print("")
     print("Game Summary")
