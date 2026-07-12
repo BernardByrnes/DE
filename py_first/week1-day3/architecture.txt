@@ -1,0 +1,52 @@
+week 1 day 6 - Number Guessing Game Architecture
+
+High-Level Architecture
+
+User
+↓
+Python Script
+↓
+Console Output
+
+Detailed Flow
+
+User enters name
+↓
+app.py receives input
+↓
+get_guess() coverts input to integer
+↓
+get_hint() compares guess to secret number
+↓
+guesses list stores each guess
+↓
+build_summary() creates a summary dictionary
+↓
+print_guess_history() prints all guesses
+↓
+print_summary() prints final result
+
+Function Responsibilities
+
+get_player_name()
+- collects the player's name
+
+get_guess()
+- asks for a guess
+- converts the guess to an integer
+
+get_hint()
+- compares the guess to the secret number
+- returns Too low, Too high, or Correct
+
+build_summary()
+- creates a dictionary containing final game results
+
+print_guess_history()
+- prints all guesses stored in the guesses list
+
+print_summary()
+- prints the final game summary
+
+main()
+- controls the full program flow
