@@ -2,6 +2,32 @@ week 1 day 6 - Number Guessing Game Architecture
 
 High-Level Architecture
 
+How to Run
+
+1. Open the terminal.
+2. Navigate into the project folder.
+3. Run:
+
+python app.py
+
+or:
+
+python3 app.py
+
+
+Input and Output
+
+Input:
+- Player name
+- Number guesses
+
+Output:
+- Hint after each guess
+- Guess history
+- Game summary
+
+
+
 User
 ↓
 Python Script
