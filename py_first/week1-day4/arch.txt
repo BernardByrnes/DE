@@ -1,0 +1,28 @@
+week 1 program architecture
+
+User
+↓
+Python Script
+↓
+Console Output
+
+user input:
+1-user name
+2-guess
+↓
+app.py
+main() is the entry point of the application
+↓
+user_name()
+↓
+get_guess() got guess input and converted it to integer
+↓
+get_hint() compares guess with secret number
+↓
+guess list stores guess
+↓
+build_summary() creates a dictonary of results
+↓
+print_guess_history() prints all guesses
+↓
+print_summary() print final result
