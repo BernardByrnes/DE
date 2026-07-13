@@ -24,9 +24,14 @@ def print_students(students):
         )
 
 
+def print_record_count(students):
+    print(f"Records read: {len(students)}")
+
+
 def main():
     file_path = "students.csv"
     students = read_students(file_path)
+    print_record_count(students)
     print_students(students)
 
 
