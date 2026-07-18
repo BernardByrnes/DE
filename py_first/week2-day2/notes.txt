@@ -1,0 +1,31 @@
+Python helps data engineers.
+Data engineers read files.
+Python scripts process data.
+Files become inputs for pipelines.
+Pipelines move data from one system to another.
+Raw data often needs cleaning.
+Python can remove invalid records.
+Python can transform text and numbers.
+CSV files store tabular data.
+JSON files store structured data.
+Databases store large collections of information.
+Data engineers connect applications to databases.
+Scripts can automate repetitive tasks.
+Logs help engineers understand what happened.
+INFO messages describe normal activity.
+WARNING messages describe possible problems.
+ERROR messages describe failed operations.
+Python can search text inside log files.
+Data validation checks whether records are correct.
+Missing values may need to be removed or replaced.
+Duplicate records can produce incorrect results.
+Clean data is easier to analyse.
+Reliable pipelines handle errors carefully.
+A pipeline should record when processing starts.
+A pipeline should record when processing finishes.
+Processed data can be saved into a new file.
+Large datasets may be divided into smaller batches.
+Automation saves time and reduces manual mistakes.
+Data engineers monitor pipelines for failures.
+Python is widely used in data engineering.
+Good documentation makes scripts easier to maintain.
