@@ -4,9 +4,19 @@ def read_text(file_path="notes.txt"):
 
     return text
 
+
 def count_lines(text):
     lines = text.splitlines()
     return len(lines)
+
+
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+
+def count_characters(text):
+    return len(text)
 
 def
 
