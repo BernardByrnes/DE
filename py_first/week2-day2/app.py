@@ -50,3 +50,5 @@ WARNING some records were skipped
 INFO output file created
 INFO database connection closed
 INFO pipeline finished"""
+
+lines = log_text.splitlines()
