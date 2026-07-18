@@ -4,11 +4,16 @@ def read_text(file_path="notes.txt"):
 
     return text
 
+def count_lines(text):
+    lines = text.splitlines()
+    return len(lines)
+
+def
 
 def main():
-    text = read_text()
+    summary = build_summary()
 
-    print(text)
+    print_summary(summary)
 
 
 if __name__ == "__main__":
