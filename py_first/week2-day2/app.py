@@ -52,3 +52,17 @@ INFO database connection closed
 INFO pipeline finished"""
 
 lines = log_text.splitlines()
+
+error_count = 0
+
+for line in lines:
+    if "ERROR" in line:
+        error_count = error_count + 1
+
+summary = {
+    "line_count": len(lines),
+    "error_count": error_count,
+}
+
+print(f"Lines Processed: {summary['line_count']} ")
+print(f"Errors found: {summary['error_count']}")
