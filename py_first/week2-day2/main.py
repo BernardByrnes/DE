@@ -42,6 +42,7 @@ def print_summary(summary):
 
 def main():
     summary = build_summary()
+    hey = 3
 
     print_summary(summary)
 
