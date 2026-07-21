@@ -1,0 +1,4 @@
+      4 Laptop
+      3 Mouse
+      2 Keyboard
+      1 Monitor
