@@ -8,3 +8,10 @@ PRODUCT COUNTS:
       1 Monitor
 --------------------------
 UNIQUE REGIONS
+East
+North
+South
+West
+--------------------------
+TOTAL TRANSACTIONS:
+10
