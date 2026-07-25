@@ -16,7 +16,17 @@ def append_student(student):
         writer = csv.Dictwriter(
             file, fieldnames=["name", "course", "grade"]
         )
-        writer = writerow(file)
+        writer.writerow(student)
+
+
+def read_students(file_path="students2.csv"):
+    students = []
+    with open(file_path, "r", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            students.append(row)
+    return students
 
 
 def main():
