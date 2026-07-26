@@ -40,7 +40,9 @@ def print_students(students):
 
 def main():
     student = get_student()
-
+    append_student(student)
+    students = read_students("student2.csv")
+    print_students(students)
     print(student)
 
 
