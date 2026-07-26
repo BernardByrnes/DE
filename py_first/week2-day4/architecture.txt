@@ -1,0 +1,21 @@
+Week 2 Day 4 — SQL SELECT Practice Architecture
+
+students.csv
+↓
+Imported with DB Browser for SQLite
+↓
+students.db
+↓
+students table
+↓
+SQL queries
+↓
+Query results
+
+
+Queries Practiced:
+
+SELECT
+WHERE
+ORDER BY
+LIMIT
