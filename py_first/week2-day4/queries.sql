@@ -15,4 +15,4 @@ ORDER BY grade DESC;
 SELECT *
 FROM students
 ORDER BY grade DESC
-LIMIT 3;
+LIMIT 3
