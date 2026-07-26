@@ -29,6 +29,15 @@ def read_students(file_path="students2.csv"):
     return students
 
 
+def print_students(students):
+    print("")
+    print("students")
+    print("--------------")
+
+    for student in students:
+        print(f"my name is {student['name']}")
+
+
 def main():
     student = get_student()
 
