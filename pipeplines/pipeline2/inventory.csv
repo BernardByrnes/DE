@@ -1,0 +1,11 @@
+id,product,category,stock,price
+1,Laptop,Electronics,25,999.99
+2,Mouse,Electronics,150,25.50
+3,Desk Chair,Furniture,40,199.99
+4,Coffee Maker,Kitchen,60,89.99
+5,Notebook,Stationery,300,5.99
+6,Monitor,Electronics,20,299.99
+7,Water Bottle,Kitchen,200,12.99
+8,Pen Set,Stationery,180,15.99
+9,Headphones,Electronics,45,79.99
+10,Lamp,Furniture,30,45.00
