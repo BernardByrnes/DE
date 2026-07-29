@@ -1,0 +1,4 @@
+      4 Electronics
+      2 Stationery
+      2 Kitchen
+      2 Furniture
