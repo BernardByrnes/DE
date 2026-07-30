@@ -1,3 +1,13 @@
 INVENTORY REPORT
 Wed, Jul 29, 2026 11:23:08 AM
 -----------------------------------
+LOW STOCK ITEMS (under 50 units)
+id,product,category,stock,price
+1,Laptop,Electronics,25,999.99
+3,Desk Chair,Furniture,40,199.99
+6,Monitor,Electronics,20,299.99
+9,Headphones,Electronics,45,79.99
+10,Lamp,Furniture,30,45.00
+--------------------------------
+Total unique categories:
+4
