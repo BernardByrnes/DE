@@ -1,0 +1,6 @@
+title,author,year,pages
+The Hobbit,Tolkien,1937,310
+Dune,Herbert,1965,412
+1984,Orwell,1949,328
+Foundation,Asimov,1951,255
+Neuromancer,Gibson,1984,271
