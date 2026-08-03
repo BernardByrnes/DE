@@ -1,6 +1,30 @@
 import csv
 
 
+def get_teacher():
+    name = input("What is your name? ")
+    subject = input("What subject do you teach? ")
+    students = input(
+        "How many students are in your class? "
+    )
+
+    return {
+        "name": name,
+        "subject": subject,
+        "students": students,
+    }
+
+
+def append_teacher(teacher):
+    with open(
+        "teachers.csv", "a", encoding="utf", newline=""
+    ) as file:
+        writer = csv.DictWriter(
+            file, fieldnames=["name", "subject", "students"]
+        )
+        writer.writerow(teacher)
+
+
 def read_file(file_path="teachers.csv"):
     teachers = []
     with open(file_path, "r", encoding="utf-8") as file:
@@ -28,6 +52,8 @@ def print_list(teachers):
 
 
 def main():
+    teacher = get_teacher()
+    append_teacher(teacher)
     teachers = read_file("teachers.csv")
     print_list(teachers)
 
