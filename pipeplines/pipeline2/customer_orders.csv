@@ -1,0 +1,11 @@
+order_id,customer,city,product,quantity
+101,Alice,New York,Laptop,1
+102,Bob,Chicago,Mouse,3
+103,Alice,New York,Keyboard,2
+104,Charlie,Boston,Laptop,1
+105,Bob,Chicago,Monitor,1
+106,Diana,Seattle,Mouse,5
+107,Alice,New York,Monitor,2
+108,Charlie,Boston,Keyboard,1
+109,Bob,Chicago,Laptop,1
+110,Eve,Portland,Mouse,2
